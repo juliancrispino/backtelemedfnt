@@ -85,5 +85,19 @@ public class MedicionController {
         return ResponseEntity.ok(responseDTO);
     }
 
+    @GetMapping("/test")
+    public ResponseEntity<ResponseDTO> test(){
+        log.info("getMediciones - INICIO");
+        ResponseDTO responseDTO = new ResponseDTO();
+        try{
+           log.info("Test realizado correctamente");
+           responseDTO.setSuccess(true);
+        } catch (Exception e){
+            log.error("Error en test");
+            responseDTO.setSuccess(false);
+        }
+        return ResponseEntity.ok(responseDTO);
+    }
+
 
 }
