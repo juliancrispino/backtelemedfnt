@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 @Slf4j
 @RestController
+@CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("/mediciones")
 public class MedicionController {
 
@@ -87,7 +88,7 @@ public class MedicionController {
 
     @GetMapping("/test")
     public ResponseEntity<ResponseDTO> test(){
-        log.info("getMediciones - INICIO");
+        log.info("test - INICIO");
         ResponseDTO responseDTO = new ResponseDTO();
         try{
            log.info("Test realizado correctamente");
