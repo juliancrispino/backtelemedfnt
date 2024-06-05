@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 @Slf4j
 @RestController
-@CrossOrigin(origins = "https://telemedicionesfnt.netlify.app/")
+@CrossOrigin(origins = {"https://telemedicionesfnt.netlify.app/", "http://localhost:4200"} )
 @RequestMapping("/mediciones")
 public class MedicionController {
 
