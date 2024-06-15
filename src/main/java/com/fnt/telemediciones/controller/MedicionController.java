@@ -69,7 +69,7 @@ public class MedicionController {
         return ResponseEntity.ok(responseDTO);
     }
 
-    @DeleteMapping("/deleteMedicion/{idMedicion}")
+    @DeleteMapping("/deleteMedicion/{id}")
     public ResponseEntity<ResponseDTO> deleteMedicion(@PathVariable Long id){
         log.info("deleteMedicion - INICIO - Medicion id: {}", id);
         ResponseDTO responseDTO = new ResponseDTO();
